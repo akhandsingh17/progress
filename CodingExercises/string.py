@@ -6,6 +6,7 @@ def SingleOccurence(ary):
         else:
             count = dct[i]+1
             dct[i] = count
+    print dct
     return list(filter(lambda x: x[1]==1 ,dct.items()))
 
 def main():

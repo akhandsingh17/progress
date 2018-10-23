@@ -20,15 +20,15 @@ class BinaryTree(object):
 
     def inorder(self,start,traversal):
         if start!=None:
-            traversal = self.preorder(start.left, traversal)
+            traversal = self.inorder(start.left, traversal)
             traversal=traversal+ (str(start.value)+ '-')
-            traversal = self.preorder(start.right, traversal)
+            traversal = self.inorder(start.right, traversal)
         return traversal
 
     def postorder(self,start,traversal):
         if start!=None:
-            traversal = self.preorder(start.left, traversal)
-            traversal = self.preorder(start.right, traversal)
+            traversal = self.postorder(start.left, traversal)
+            traversal = self.postorder(start.right, traversal)
             traversal = traversal + (str(start.value) + '-')
         return traversal
 
@@ -116,7 +116,7 @@ def main():
     tree.root.left.left=Node(3)
     tree.root.left.right=Node(5)
     tree.root.right.left=Node(2)
-    print(tree.print_tree('preorder'))
+    print(tree.print_tree('inorder'))
     print(tree.ChildrenSumBinaryTree())
     print(tree.ChildrenSumBinaryTree_iterative())
 
