@@ -562,7 +562,7 @@ if __name__ == "__main__":
     #print(ReplaceString(str4))
 
     ary = [1, 1, 1, 2, 2, 3, 5, 5, 7, 7, 7, 8, 9, 10, 34, 34, 56, 56, 56]
-    #print(RemoveDuplicates(ary))
+    #print(RemoveDuplicates(eary))
 
 
     #ary = [9, 9, 9, 7]

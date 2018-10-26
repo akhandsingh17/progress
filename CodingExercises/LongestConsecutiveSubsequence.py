@@ -29,7 +29,7 @@ def main():
     print(LongestConsecutiveSubsequence(ary))
 
     ary = [36, 41, 56, 35, 44, 33, 34, 92, 43, 32, 42]
-    print(LongestConsecutiveSubsequence(ary))
+    #print(LongestConsecutiveSubsequence(ary))
 
 if __name__=='__main__':
     main()
