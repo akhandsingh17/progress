@@ -1,35 +1,24 @@
 # Print all subarrays with 0 sum
 # Given an array, print all subarrays in the array which has sum 0.
 
-def AllSubArraySum(ary):
+def AllSubArraySum(ary,k):
 
     dict={}
-    sum=0
     fnl_lst=[]
-    for i in range(0,len(ary)):
-
-        sum=sum+ary[i]
-
-        if sum==0:
-            tup=(0,i)
-            fnl_lst.append(tup)
+    for i in ary:
+        if i not in dict:
+            dict[k-i]=[i]
         else:
-            if sum in dict.keys():
-                val=dict[sum]
-                for idx in val:
-                    tup=(idx+1,i)
-                    fnl_lst.append(tup)
-                dict[sum].append(i)
-            else:
-                tmp=[]
-                tmp.append(i)
-                dict[sum]=tmp
+            fnl_lst.extend(map(lambda x:[x,i],dict[i]))
+            if k-i not in dict:
+                dict[k-i]=i
     return fnl_lst
 
 def main():
     
     ary=[6, 3, -1, -3, 4, -2, 2,4, 6, -12, -7]
-    print(AllSubArraySum(ary))
+    k=0
+    print(AllSubArraySum(ary,k))
 
 if __name__=='__main__':
     main()
