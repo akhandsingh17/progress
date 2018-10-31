@@ -14,6 +14,16 @@ def MissingElementsRange(ary,low,high):
 
     return fnl_lst
 
+'''
+
+def MissingElementsRange(arr,low,high):
+    s=set()
+    tup=(low,high+1)
+    s=s.union(range(*tup)).difference(set(arr))
+    return sorted(list(s))
+    
+'''
+
 def main():
 
     ary=[10, 12, 11, 15]
