@@ -1,6 +1,10 @@
 '''
 
 Good morning! Here's your coding interview problem for today.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ed09322e978703bdb73bb3b6dd6372e9fbb8532
 This problem was asked by Uber.
 
 Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
@@ -8,6 +12,7 @@ Given an array of integers, return a new array such that each element at index i
 For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
 
 Follow-up: what if you can't use division?
+<<<<<<< HEAD
 
 '''
 
@@ -24,6 +29,10 @@ def DailyCodingProblem2_method2(ary):
     return lst
 
 
+=======
+'''
+
+>>>>>>> 8ed09322e978703bdb73bb3b6dd6372e9fbb8532
 def DailyCodingProblem2(ary):
 
     result=1

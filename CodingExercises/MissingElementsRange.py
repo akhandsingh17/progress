@@ -14,6 +14,7 @@ def MissingElementsRange(ary,low,high):
 
     return fnl_lst
 
+<<<<<<< HEAD
 '''
 
 def MissingElementsRange(arr,low,high):
@@ -24,6 +25,8 @@ def MissingElementsRange(arr,low,high):
     
 '''
 
+=======
+>>>>>>> 8ed09322e978703bdb73bb3b6dd6372e9fbb8532
 def main():
 
     ary=[10, 12, 11, 15]
