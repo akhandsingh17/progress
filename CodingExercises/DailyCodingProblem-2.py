@@ -1,10 +1,8 @@
 '''
 
 Good morning! Here's your coding interview problem for today.
-<<<<<<< HEAD
-=======
 
->>>>>>> 8ed09322e978703bdb73bb3b6dd6372e9fbb8532
+
 This problem was asked by Uber.
 
 Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
@@ -29,10 +27,8 @@ def DailyCodingProblem2_method2(ary):
     return lst
 
 
-=======
-'''
 
->>>>>>> 8ed09322e978703bdb73bb3b6dd6372e9fbb8532
+
 def DailyCodingProblem2(ary):
 
     result=1
@@ -64,6 +60,8 @@ def DailyCodingProblem2_alternate(ary):
         fnl_lst.append(left[i]*right[i])
 
     return fnl_lst
+
+
 
 def main():
 
