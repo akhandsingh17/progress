@@ -13,3 +13,46 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 You can assume that the messages are decodable. For example, '001' is not allowed.
 
 '''
+
+
+
+# A Dynamic Programming based
+# Python 3 implementation to count decodings
+
+# A Dynamic Programming based
+# function to count decodings
+
+def helper(data,k,memo):
+
+    result=[]
+    if k == 0:
+        return 1
+
+    s=len(data)-k
+    if data[s]== 0 :
+        return 0
+
+    if memo[k] :
+        return memo[k]
+
+    result = helper(data, k-1,memo)
+    if k>= 2 and int(data[s:s+2]) <= 26:
+        result+=helper(data,k-2,memo)
+    memo[k]=result
+    return result
+
+
+def countDecodingDP(data,memo):
+    k=len(data)
+    return helper(data,k,memo)
+
+
+def main():
+    digits='10'
+    k=len((digits))
+    memo=[None]*(k+1)
+    print countDecodingDP(digits,memo)
+
+if __name__ == "__main__":
+    main()
+
