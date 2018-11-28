@@ -25,6 +25,10 @@ You can assume that the messages are decodable. For example, '001' is not allowe
 def helper(data,k,memo):
 
     result=[]
+    if len(data)==0:
+        return 0
+
+
     if k == 0:
         return 1
 
