@@ -41,7 +41,23 @@ class LinkedStack:
             return answer
 
 if __name__ == "__main__":
-    MyStack = LinkedStack()
-    MyStack.push(11)
-    print(MyStack.top())
+    s = LinkedStack()
+    try:
+        s.top()
+    except EmptyStackException:
+        pass
+    max_range = 100
+    for i in range(max_range):
+        s.push(i)
+
+    i = max_range
+    while not s.isEmpty():
+        i -= 1
+        print(s.top())
+        assert s.pop() == i
+
+    try:
+        s.pop()
+    except EmptyStackException:
+        pass
 
