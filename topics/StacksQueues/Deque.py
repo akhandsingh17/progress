@@ -1,4 +1,4 @@
-from assignments.assignments.topics.StacksQueues.DoublyLinkedBase import _DoublyLinkedBase
+from assignments.topics.StacksQueues.DoublyLinkedBase import _DoublyLinkedBase
 """ Implementing double ended queue using doubly linked list """
 class Deque(_DoublyLinkedBase):
 
