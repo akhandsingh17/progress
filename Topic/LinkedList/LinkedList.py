@@ -17,13 +17,25 @@ class MyLinkedList:
         self._size = 0
 
     def __str__(self):
-        return 'Head {0}, Tail {1}'.format(self._head, self._tail)
+        traverse = lambda x: [str(x)]+traverse(x._next) if x else []
+        return '{ ' + ' -> '.join(traverse(self._head)) + ' }'
 
     def __len__(self):
         return self._size
 
     def is_empty(self):
         return self._size == 0
+
+    def get_node(self, index: int) -> int:
+        """
+        Get the value of the index-th node in the linked list. If the index is invalid, return -1.
+        """
+        if index < 0 or index >= self._size:
+            return -1
+        curr = self._head
+        for j in range(index):
+            curr = curr._next
+        return curr
 
     def get(self, index: int) -> int:
         """
@@ -116,5 +128,6 @@ if __name__ == "__main__":
     assert (linkedList.get(1)) == 2
     linkedList.deleteAtIndex(1)
     assert (linkedList.get(1)) == 3
+    print(linkedList)
 
 
