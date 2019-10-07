@@ -1,15 +1,19 @@
 class _DoublyLinkedBase:
+
     class _Node:
-        def __init__(self, element, prev = None, next= None):
+        def __init__(self, element, prev=None, next=None):
             self._element = element
             self._prev = prev
             self._next = next
+
+        def __str__(self):
+            return 'Node <{}>'.format(self._element)
 
     def __init__(self):
         self._head = self._Node(None)
         self._tail = self._Node(None)
         self._head._next = self._tail
-        self.tail._prev = self._head
+        self._tail._prev = self._head
         self._size = 0
 
 
@@ -19,15 +23,14 @@ class _DoublyLinkedBase:
     def isEmpty(self):
         return self._size == 0
 
-
-    def insert_between(self, e, predecessor, successor):
+    def _insert_between(self, e, predecessor, successor):
         new = self._Node(e, predecessor, successor)
         predecessor._next = new
         successor._prev = new
         self._size += 1
         return new
 
-    def delete_node(self, node):
+    def _delete_node(self, node):
         predecessor = node._prev
         successor = node._next
         predecessor._next = successor
