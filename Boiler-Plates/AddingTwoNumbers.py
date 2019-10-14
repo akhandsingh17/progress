@@ -25,4 +25,4 @@ def AddingTwoNumbers(num1, num2):
 if __name__ == "__main__":
     num1 = 37
     num2 = 679
-    print(AddingTwoNumbers(num1,num2))
+    print(AddingTwoNumbers(num1, num2))
