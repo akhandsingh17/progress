@@ -20,3 +20,4 @@ def validateIP(strIP):
 if __name__ == "__main__":
     assert (validateIP('192.168.0.1')) == True
     assert (validateIP('666.1.2.2')) == False
+    assert (validateIP('ABC.1.2.2')) == False
