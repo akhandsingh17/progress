@@ -4,7 +4,7 @@ def nestedSort(lst):
     :param lst:
     :return:
     """
-    return sorted(lst, key=lambda x:x['key']['subkey'], reverse=True)
+    return sorted(lst, key=lambda x: x['key']['subkey'], reverse=True)
 
 if __name__ == "__main__":
     lst=[

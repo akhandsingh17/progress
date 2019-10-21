@@ -8,7 +8,7 @@ def MostRecurringElement(tup):
     dct = {}
     for key in tup:
         if key in dct.keys():
-            dct[key] = 1 + dct.get(key,0)
+            dct[key] = 1 + dct.get(key, 0)
         else:
             dct[key] = 1
     return sorted(dct.items(), key=lambda x:x[1])[-1][0]
