@@ -5,12 +5,16 @@ def StringExpansion(str):
     :param str:
     :return:
     """
-    freq = [i for i in str[1::2]]
-    chr = [chr for chr in str[0::2]]
-    result = ''
-    for i in range (len(chr)):
-        result = result + chr[i] * int(freq[i])
-    return result
+    result = []
+    prev_char = ''
+    for i in str:
+        if ord(i) >= 48 and ord(i) <= 57:
+            frequency = int(i)
+            while frequency > 0:
+                result.append(prev_char)
+                frequency -= 1
+        prev_char = i
+    return ''.join(result)
 
 if __name__ == "__main__":
     str_exp = 'a3b1c5a2d2'

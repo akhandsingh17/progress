@@ -28,7 +28,7 @@ def WordInverse(mystr):
         stack.push(word)
     result = ''
     while not (stack.isEmpty()):
-        result = result + ' ' +stack.pop()
+        result = result + ' ' + stack.pop()
     return result
 
 if __name__ == "__main__":
