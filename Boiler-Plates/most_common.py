@@ -2,7 +2,7 @@ import collections
 
 def most_common(ary):
     freq = collections.Counter(ary).most_common()
-    result = list(filter(lambda x:x[1] > 1, freq ))
+    result = list(filter(lambda x:x[1] > 1, freq))
     return result
 
 if __name__ == "__main__":
