@@ -7,7 +7,7 @@ def StringCompression(str_exp):
     prev = str_exp[0]
     cnt = 1
     result = ''
-    for i in range(1,len(str_exp)):
+    for i in range(1, len(str_exp)):
         if prev == str_exp[i]:
             cnt += 1
         else:

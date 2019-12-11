@@ -19,6 +19,7 @@ def firstNonRecurring(lst):
     return -1
 
 if __name__ == "__main__":
+    assert firstNonRecurring([]) == -1
     assert (firstNonRecurring([1, 2, 1])) == 2
     assert (firstNonRecurring([1, 2, 1, 3, 2])) == 3
     assert (firstNonRecurring([1, 2, 1, 3, 3, 4])) == 2
