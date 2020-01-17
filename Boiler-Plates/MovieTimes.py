@@ -11,7 +11,7 @@ def MovieTimes(lst):
     k = 0
     for i in range(1, len(lst)):
         if result[k][1] > lst[i][0]:
-            temp = (result[k][0],lst[i][1])
+            temp = (result[k][0], lst[i][1])
             del result[k]
             result.append(temp)
         else:
