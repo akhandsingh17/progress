@@ -10,15 +10,14 @@ class Solution:
     def pivotIndex(self, nums) -> int:
         totalsum = sum(nums[:])
         left_sum = 0
-        pivot = -1
         for i in range(len(nums)):
             if(totalsum - nums[i] == left_sum):
                 return i
             left_sum = left_sum + nums[i]
-            totalsum = totalsum-nums[i]
-        return pivot
+            totalsum = totalsum - nums[i]
+        return -1
 
 if __name__ == "__main__":
-    nums = [1, 2, 3]
+    nums = [1, 2, 1]
     s = Solution()
     print(s.pivotIndex(nums))

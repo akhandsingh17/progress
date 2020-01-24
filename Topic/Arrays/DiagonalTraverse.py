@@ -73,4 +73,4 @@ if __name__ == "__main__":
     print(board)
     print('\n')
     print(board.diag_traverse(3,3))
-    print(board.spiral_traverse(3,3))
+    print(board.zigzag_traverse(3,3))
