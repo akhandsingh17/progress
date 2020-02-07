@@ -1,11 +1,9 @@
 
 def centered_average(nums):
     nums.sort()
-    print(nums)
     result = []
     for i in range(1, len(nums)-1):
         result.append(nums[i])
-    print(result)
     return sum(result)/len(result)
 
 if __name__ == "__main__":
