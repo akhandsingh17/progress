@@ -1,6 +1,0 @@
-
-hello world
-world hello
-hello
-howdy
-
